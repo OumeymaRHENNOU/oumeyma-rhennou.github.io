@@ -1,0 +1,458 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Oumeyma Rhennou — Data & AI portfolio</title>
+<style>
+:root{--bg:#fff;--soft:#F3F6FA;--ink:#0B1B33;--mut:#51607A;--line:#DCE3EC;--acc:#2F5D9B;--gold:#B8892B;--bad:#B4231B;color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+html{scroll-behavior:smooth;scroll-padding-top:64px}*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:16.5px/1.65 system-ui,-apple-system,"Segoe UI",sans-serif}
+.w{max-width:960px;margin:0 auto;padding:0 24px}
+nav{position:sticky;top:0;z-index:5;background:rgba(255,255,255,.94);backdrop-filter:blur(6px);border-bottom:1px solid var(--line)}
+nav .w{display:flex;gap:24px;overflow-x:auto;padding-top:14px;padding-bottom:14px;font-size:15px;align-items:center}
+nav a{color:var(--mut);text-decoration:none;white-space:nowrap}nav a:hover{color:var(--acc)}
+.lang-btn{margin-left:auto;padding:6px 14px;border:1px solid var(--line);border-radius:99px;background:#fff;color:var(--ink);font-size:14px;cursor:pointer;font-weight:600;white-space:nowrap;transition:all .2s}
+.lang-btn:hover{background:var(--acc);color:#fff;border-color:var(--acc)}
+.top{background:var(--soft);border-bottom:1px solid var(--line)}
+.hd{display:flex;gap:32px;align-items:center;flex-wrap:wrap;padding-top:54px;padding-bottom:50px}
+.hd img{width:148px;height:148px;border-radius:50%;object-fit:cover;border:4px solid #fff;box-shadow:0 0 0 1px var(--line)}
+h1{font:600 clamp(36px,6vw,54px)/1.05 Georgia,"Times New Roman",serif;margin:0 0 8px}
+.sub{font-size:19px;color:var(--acc);margin:0 0 12px}.lead{max-width:60ch;margin:0 0 16px;color:var(--mut)}
+.btn{display:inline-block;padding:8px 16px;border-radius:6px;background:var(--acc);color:#fff;text-decoration:none;font-size:15px}
+section{padding:54px 0 8px}
+h2{font:600 30px/1.2 Georgia,"Times New Roman",serif;margin:0 0 26px;padding-bottom:10px;border-bottom:1px solid var(--line);position:relative}
+h2::after{content:"";position:absolute;left:0;bottom:-1px;width:56px;height:3px;background:var(--acc)}
+p{margin:0 0 12px;max-width:68ch}
+.chip{display:inline-block;border:1px solid var(--line);background:#fff;border-radius:99px;padding:1px 11px;margin:0 6px 6px 0;font-size:13.5px;color:var(--ink)}
+.tl{list-style:none;margin:0;padding:0 0 0 22px;border-left:2px solid var(--line)}
+.tl>li{position:relative;margin:0 0 26px}
+.tl>li::before{content:"";position:absolute;left:-30px;top:7px;width:12px;height:12px;border-radius:50%;background:#fff;border:3px solid var(--acc)}
+.tl h3{margin:0;font-size:18px}.tl .d{color:var(--mut);font-size:14.5px;margin:0 0 6px}.tl ul{margin:0;padding-left:18px}.tl ul li{margin:0 0 4px}
+.ix{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:10px;margin:0 0 30px}
+.ix a{display:block;padding:11px 14px;border:1px solid var(--line);border-left:3px solid var(--acc);border-radius:4px;text-decoration:none;color:var(--ink);font-size:15px;line-height:1.35}
+.ix a:hover{background:var(--soft)}.ix small{display:block;color:var(--mut);margin-top:2px}
+.pj{display:grid;grid-template-columns:200px 1fr;gap:30px;padding:30px 0;border-top:1px solid var(--line)}
+.pj aside{font-size:14.5px;color:var(--mut)}.pj aside p{margin:0 0 12px}
+h3.t{font:600 23px/1.25 Georgia,"Times New Roman",serif;margin:0 0 14px}
+.c{display:grid;grid-template-columns:1fr 1fr;gap:26px}.c p{max-width:none}
+h4{margin:0 0 4px;font-size:15.5px;color:var(--acc)}
+figure{margin:20px 0 6px;padding:16px;background:var(--soft);border:1px solid var(--line);border-radius:6px;overflow-x:auto}
+figure svg{min-width:600px;width:100%;height:auto;display:block}figcaption{font-size:13.5px;color:var(--mut);margin-top:8px}
+.k{border-left:3px solid var(--gold);padding:2px 0 2px 14px;margin:18px 0 0}.k h4{color:var(--gold)}
+.sk{display:grid;grid-template-columns:170px 1fr;gap:6px 24px;margin:0}.sk dt{font-weight:600}.sk dd{margin:0 0 10px}
+footer{border-top:1px solid var(--line);margin-top:50px;padding:26px 0 46px;color:var(--mut);font-size:15px}
+.bx{fill:#fff;stroke:var(--acc);stroke-width:1.2}.tx{fill:var(--ink);font:12.5px system-ui,sans-serif}.b{font-weight:600}
+.ar{stroke:var(--mut);fill:none;stroke-width:1.4}.hl .bx{fill:var(--acc)}.hl .tx{fill:#fff;font-weight:600}.ln{fill:var(--line)}
+.bad{fill:#FDECEA;stroke:var(--bad);stroke-width:1.2}.bad2{fill:#fff;stroke:var(--bad);stroke-dasharray:4 3;stroke-width:1.2}
+.er{stroke:var(--bad);stroke-dasharray:5 4;fill:none;stroke-width:1.4}.tb{fill:#E9F0F8;stroke:var(--line)}.sp{stroke:var(--acc);fill:none;stroke-width:2}
+.contact-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:20px;margin-top:10px}
+.contact-card{background:var(--soft);border:1px solid var(--line);border-radius:8px;padding:24px;text-align:center}
+.contact-card h3{font:600 18px/1.3 Georgia,"Times New Roman",serif;margin:0 0 6px;color:var(--ink)}
+.contact-card p{color:var(--mut);font-size:15px;margin:0 0 16px;max-width:none}
+.contact-card a{display:inline-block;padding:9px 22px;border-radius:6px;background:var(--acc);color:#fff;text-decoration:none;font-size:15px;font-weight:500;transition:background .2s}
+.contact-card a:hover{background:#24497a}
+.contact-card .icon{font-size:28px;margin-bottom:10px;color:var(--acc)}
+.contact-info{text-align:center;margin-bottom:30px}
+.contact-info p{margin:0 auto;max-width:60ch;color:var(--mut)}
+@media(max-width:760px){.pj{grid-template-columns:1fr;gap:8px}.c,.sk{grid-template-columns:1fr}.hd{padding-top:34px}.lang-btn{margin-left:0}}
+</style>
+</head>
+<body>
+
+<nav><div class="w">
+<a href="#about" data-i18n="nav.about">About</a>
+<a href="#career" data-i18n="nav.career">Career</a>
+<a href="#projects" data-i18n="nav.projects">Projects</a>
+<a href="#skills" data-i18n="nav.skills">Skills</a>
+<a href="#education" data-i18n="nav.education">Education</a>
+<a href="#research" data-i18n="nav.research">Research</a>
+<a href="#contact" data-i18n="nav.contact">Contact</a>
+<button class="lang-btn" id="langBtn" onclick="toggleLang()" aria-label="Switch language">FR</button>
+</div></nav>
+
+<div class="top"><div class="w hd">
+<img src="data:image/jpeg;base64,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" alt="Portrait of Oumeyma Rhennou" data-i18n-alt="portrait.alt">
+<div>
+<h1>Oumeyma Rhennou</h1>
+<p class="sub" data-i18n="hero.sub">Data &amp; AI · PhD candidate</p>
+<p class="lead" data-i18n="hero.lead">I design verification and traceability mechanisms for LLM-based systems. This portfolio presents my projects: the problem, the solution adopted, and what I learned from them.</p>
+<a class="btn" href="mailto:oumeyma.rhennou00@gmail.com" data-i18n="hero.btn">Contact me</a>
+</div></div></div>
+
+<div class="w">
+
+<section id="about"><h2 data-i18n="about.title">About</h2>
+<p data-i18n="about.p1">I hold two Master's degrees from Université Paris 8 (Big Data &amp; Data Mining; Artificial Intelligence Engineering) and have experience in data engineering, data analysis, and AI solution development.</p>
+<p data-i18n="about.p2">In a corporate setting, I designed a data quality control system based on multiple LLM instances. It applies business rules, precisely locates errors, and tracks their evolution. This experience, extended by a multi-agent project with LangGraph, fuels my interest in decision traceability and the reliability of agent chains.</p></section>
+
+<section id="career"><h2 data-i18n="career.title">Professional experience</h2><ul class="tl">
+<li><h3 data-i18n="career.j1.title">Data Engineer intern — Data Quality &amp; AI (LLM)</h3><p class="d" data-i18n="career.j1.date">Givenchy, Paris · January to July 2026</p><ul>
+<li data-i18n="career.j1.b1">Multi-instance LLM data quality control system with monitoring report (<a href="#p1">see project</a>).</li>
+<li data-i18n="career.j1.b2">Finance ETL/ELT pipelines and BigQuery modeling with Dataform for reporting and financial planning.</li>
+<li data-i18n="career.j1.b3">Talend to GCP migration and infrastructure with Terraform (<a href="#p2">see project</a>).</li>
+<li data-i18n="career.j1.b4">Business requirements, functional specifications, and technical documentation.</li></ul></li>
+<li><h3 data-i18n="career.j2.title">Data Analyst intern</h3><p class="d" data-i18n="career.j2.date">Office National des Aéroports, Oujda, Morocco · January to June 2022</p><ul>
+<li data-i18n="career.j2.b1">Extraction and processing of logistics data to track performance indicators.</li><li data-i18n="career.j2.b2">Management reports presenting indicators and their evolution.</li></ul></li></ul></section>
+
+<section id="projects"><h2 data-i18n="projects.title">Projects</h2><div class="ix">
+<a href="#p1" data-i18n="projects.p1.link">Multi-instance LLM data quality control<small>Givenchy, Paris, Jan–Jul 2026</small></a>
+<a href="#p2" data-i18n="projects.p2.link">Finance pipelines and GCP migration<small>Givenchy, Paris, 2026</small></a>
+<a href="#p3" data-i18n="projects.p3.link">Multi-agent system with LangGraph<small>Hackathon, team</small></a>
+<a href="#p4" data-i18n="projects.p4.link">White blood cell classification with deep learning<small>January 2026</small></a>
+<a href="#p5" data-i18n="projects.p5.link">Customer churn prediction<small>April 2025</small></a>
+<a href="#p6" data-i18n="projects.p6.link">Heart attack risk prediction<small>December 2024</small></a>
+</div>
+
+<article class="pj" id="p1"><aside><p data-i18n="p1.date">Givenchy, Paris, January to July 2026</p><div><span class="chip">Python</span><span class="chip">LLM</span><span class="chip">BigQuery</span><span class="chip">Cloud Scheduler</span></div></aside><div><h3 class="t" data-i18n="p1.title">Multi-instance LLM data quality control</h3><div class="c"><div><h4 data-i18n="p1.problem.h">Problem</h4><p data-i18n="p1.problem.p">Finance business rules are written in natural language. Verifying them on large data volumes requires translating them one by one into checks, and a simple "error" report doesn't indicate where or why a data point is wrong.</p></div><div><h4 data-i18n="p1.solution.h">Solution</h4><p data-i18n="p1.solution.p1">I designed a system where multiple LLM instances, each assigned a batch of data, read the business rules and apply them to verify data acceptability.</p><p data-i18n="p1.solution.p2">When data is unacceptable, the system returns the exact columns and rows in error and the nature of the quality error. A report tracks error evolution, and Cloud Scheduler triggers execution automatically.</p></div></div><figure><svg viewBox="0 0 720 212" role="img" aria-label="Illustrative example: business rules and data read by multiple LLM instances, anomalies located in a monitoring report"><rect class="bx" x="0" y="0" width="160" height="78" rx="6"/><text class="tx b" x="12" y="20">Business rules</text><rect class="ln" x="12" y="32" width="130" height="5"/><rect class="ln" x="12" y="44" width="104" height="5"/><rect class="ln" x="12" y="56" width="118" height="5"/><text class="tx b" x="0" y="104">Data, by batch</text><rect class="tb" x="0" y="114" width="52" height="22"/><text class="tx b" x="26" y="129" text-anchor="middle">id</text><rect class="tb" x="52" y="114" width="52" height="22"/><text class="tx b" x="78" y="129" text-anchor="middle">amount</text><rect class="tb" x="104" y="114" width="52" height="22"/><text class="tx b" x="130" y="129" text-anchor="middle">date</text><rect class="bx" x="0" y="136" width="52" height="22"/><text class="tx" x="26" y="151" text-anchor="middle">101</text><rect class="bx" x="52" y="136" width="52" height="22"/><text class="tx" x="78" y="151" text-anchor="middle">1 200</text><rect class="bx" x="104" y="136" width="52" height="22"/><text class="tx" x="130" y="151" text-anchor="middle">03/01</text><rect class="bx" x="0" y="158" width="52" height="22"/><text class="tx" x="26" y="173" text-anchor="middle">102</text><rect class="bad" x="52" y="158" width="52" height="22"/><text class="tx" x="78" y="173" text-anchor="middle">-40</text><rect class="bx" x="104" y="158" width="52" height="22"/><text class="tx" x="130" y="173" text-anchor="middle">04/01</text><rect class="bx" x="0" y="180" width="52" height="22"/><text class="tx" x="26" y="195" text-anchor="middle">103</text><rect class="bx" x="52" y="180" width="52" height="22"/><text class="tx" x="78" y="195" text-anchor="middle">860</text><rect class="bx" x="104" y="180" width="52" height="22"/><text class="tx" x="130" y="195" text-anchor="middle">04/01</text><path class="ar" d="M164 40 L258 40"/><path class="ar" d="M252 36 L258 40 L252 44"/><path class="ar" d="M164 160 L260 168"/><path class="ar" d="M254 164 L260 168 L254 172"/><g class="hl"><circle class="bx" cx="290" cy="40" r="26"/><text class="tx" x="290" y="44" text-anchor="middle">LLM</text></g><g class="hl"><circle class="bx" cx="290" cy="105" r="26"/><text class="tx" x="290" y="109" text-anchor="middle">LLM</text></g><g class="hl"><circle class="bx" cx="290" cy="170" r="26"/><text class="tx" x="290" y="174" text-anchor="middle">LLM</text></g><path class="ar" d="M320 40 L404 40"/><path class="ar" d="M398 36 L404 40 L398 44"/><path class="ar" d="M320 105 L404 105"/><path class="ar" d="M398 101 L404 105 L398 109"/><path class="ar" d="M320 170 L404 170"/><path class="ar" d="M398 166 L404 170 L398 174"/><text class="tx b" x="290" y="206" text-anchor="middle">Multiple instances</text><rect class="bx" x="410" y="0" width="200" height="198" rx="6"/><text class="tx b" x="424" y="22">Monitoring report</text><rect class="bad" x="424" y="34" width="172" height="44" rx="4"/><text class="tx" x="434" y="52">Row 2 · column amount</text><text class="tx" x="434" y="68">Error: value violates rule</text><text class="tx" x="424" y="104">Errors per execution</text><path class="ar" d="M424 176 H596 M424 176 V112"/><polyline class="sp" points="428,120 470,132 512,128 554,152 592,160"/><circle class="bx" cx="672" cy="99" r="28"/><path class="ar" d="M672 99 V82 M672 99 L684 106"/><text class="tx b" x="672" y="150" text-anchor="middle">Cloud</text><text class="tx b" x="672" y="164" text-anchor="middle">Scheduler</text><path class="er" d="M642 99 L618 99"/><path class="er" d="M612 95 L618 99 L612 103"/></svg><figcaption data-i18n="p1.figcaption">From rule text to monitoring report: each anomaly is located and typed.</figcaption></figure><div class="k"><h4 data-i18n="p1.takeaway.h">Key takeaway</h4><p data-i18n="p1.takeaway.p">An LLM verdict is only valuable if one can trace back to the rule and the data that produced it. This traceability question is what I want to explore in a PhD.</p></div></div></article>
+
+<article class="pj" id="p2"><aside><p data-i18n="p2.date">Givenchy, Paris, 2026</p><div><span class="chip">BigQuery</span><span class="chip">Dataform</span><span class="chip">Terraform</span><span class="chip">Talend</span></div></aside><div><h3 class="t" data-i18n="p2.title">Finance pipelines and GCP migration</h3><div class="c"><div><h4 data-i18n="p2.problem.h">Problem</h4><p data-i18n="p2.problem.p">Finance business data needed to be integrated and synchronized in the cloud, then reliably modeled for reporting and financial planning.</p></div><div><h4 data-i18n="p2.solution.h">Solution</h4><p data-i18n="p2.solution.p">I developed and maintained Finance pipelines, modeled data in BigQuery with Dataform, contributed to migrating from Talend to GCP, and configured infrastructure with Terraform. I also formalized business requirements and wrote specifications and technical documentation.</p></div></div><figure><svg viewBox="0 0 720 100" role="img" aria-label="GCP migration diagram"><g><rect class="bx" x="0.0" y="4" width="163.5" height="56" rx="6"/><text class="tx" x="81.8" y="29.0" text-anchor="middle">Talend</text><text class="tx" x="81.8" y="43.0" text-anchor="middle">(existing)</text></g><path class="ar" d="M166.5 32.0 h13 m-5 -4 l5 4 l-5 4"/><g><rect class="bx" x="185.5" y="4" width="163.5" height="56" rx="6"/><text class="tx" x="267.2" y="29.0" text-anchor="middle">Pipelines</text><text class="tx" x="267.2" y="43.0" text-anchor="middle">to GCP</text></g><path class="ar" d="M352.0 32.0 h13 m-5 -4 l5 4 l-5 4"/><g><rect class="bx" x="371.0" y="4" width="163.5" height="56" rx="6"/><text class="tx" x="452.8" y="29.0" text-anchor="middle">BigQuery</text><text class="tx" x="452.8" y="43.0" text-anchor="middle">+ Dataform</text></g><path class="ar" d="M537.5 32.0 h13 m-5 -4 l5 4 l-5 4"/><g><rect class="bx" x="556.5" y="4" width="163.5" height="56" rx="6"/><text class="tx" x="638.2" y="29.0" text-anchor="middle">Reporting &amp;</text><text class="tx" x="638.2" y="43.0" text-anchor="middle">planning</text></g><rect class="tb" x="0" y="72" width="720" height="26" rx="5"/><text class="tx b" x="360" y="89" text-anchor="middle">Terraform: infrastructure as code</text></svg><figcaption data-i18n="p2.figcaption">From Talend to a cloud pipeline described as code.</figcaption></figure><div class="k"><h4 data-i18n="p2.takeaway.h">Key takeaway</h4><p data-i18n="p2.takeaway.p">Describing infrastructure and transformations in code makes a pipeline reproducible and readable. Writing specifications also taught me to explain my choices to non-specialists.</p></div></div></article>
+
+<article class="pj" id="p3"><aside><p data-i18n="p3.date">Hackathon, team</p><div><span class="chip">Python</span><span class="chip">LangGraph</span></div></aside><div><h3 class="t" data-i18n="p3.title">Multi-agent system with LangGraph</h3><div class="c"><div><h4 data-i18n="p3.problem.h">Problem</h4><p data-i18n="p3.problem.p">A complex task can be broken down into steps assigned to autonomous agents. The challenge is to make them collaborate in a controlled way, within a limited timeframe.</p></div><div><h4 data-i18n="p3.solution.h">Solution</h4><p data-i18n="p3.solution.p">With my team, I implemented an autonomous agent solution using the LangGraph framework, which organizes agents as a graph and circulates information between them.</p></div></div><figure><svg viewBox="0 0 720 206" role="img" aria-label="Principle diagram: an erroneous piece of information propagates from agent to agent in a LangGraph graph"><rect class="bad" x="0" y="10" width="200" height="70" rx="6"/><text class="tx b" x="100" y="38" text-anchor="middle">Agent 1</text><text class="tx" x="100" y="58" text-anchor="middle">produces erroneous information</text><path class="ar" d="M100 80 V128"/><rect class="bad2" x="260" y="10" width="200" height="70" rx="6"/><text class="tx b" x="360" y="38" text-anchor="middle">Agent 2</text><text class="tx" x="360" y="58" text-anchor="middle">carries this information forward</text><path class="ar" d="M360 80 V128"/><rect class="bad2" x="520" y="10" width="200" height="70" rx="6"/><text class="tx b" x="620" y="38" text-anchor="middle">Agent 3</text><text class="tx" x="620" y="58" text-anchor="middle">validates the decision</text><path class="ar" d="M620 80 V128"/><path class="er" d="M204 45 L256 45"/><path class="er" d="M250 41 L256 45 L250 49"/><path class="er" d="M464 45 L516 45"/><path class="er" d="M510 41 L516 45 L510 49"/><rect class="tb" x="0" y="130" width="720" height="34" rx="5"/><text class="tx b" x="360" y="152" text-anchor="middle">Shared state of the LangGraph graph</text><text class="tx" x="0" y="192" fill="#B4231B">In red: an error transmitted from agent to agent, without any of them bearing the full justification.</text></svg><figcaption data-i18n="p3.figcaption">Principle diagram: each agent builds on the previous agent's work.</figcaption></figure><div class="k"><h4 data-i18n="p3.takeaway.h">Key takeaway</h4><p data-i18n="p3.takeaway.p">In an agent chain, each agent takes the outputs of the previous one: an error can therefore propagate without any single agent bearing the full justification for the final decision. This is the starting point of the targeted PhD.</p></div></div></article>
+
+<article class="pj" id="p4"><aside><p data-i18n="p4.date">January 2026</p><div><span class="chip">PyTorch</span><span class="chip">transfer learning</span><span class="chip">AMD GPU (ROCm)</span></div></aside><div><h3 class="t" data-i18n="p4.title">White blood cell classification with deep learning</h3><div class="c"><div><h4 data-i18n="p4.problem.h">Problem</h4><p data-i18n="p4.problem.p">Manual analysis of medical images is slow and varies between operators. The Kaggle dataset, over 10,000 images annotated by experts, is highly imbalanced: 60% neutrophils versus 2% basophils.</p></div><div><h4 data-i18n="p4.solution.h">Solution</h4><p data-i18n="p4.solution.p">After a literature review, I used GoogleNet pretrained on ImageNet: frozen base layers, retrained top layers, new 5-class output. I compared this approach with MobileNet v2/v3, EfficientNet-B0, SqueezeNet, ShuffleNet v2, and ResNet18, using learning curves and confusion matrices.</p></div></div><figure><svg viewBox="0 0 720 156" role="img" aria-label="Image distribution by white blood cell type"><text class="tx" x="0" y="20">Neutrophils</text><rect class="bx" x="120" y="4" width="440" height="22" rx="3"/><text class="tx" x="568" y="20">6,231</text><text class="tx" x="0" y="50">Lymphocytes</text><rect class="bx" x="120" y="34" width="171" height="22" rx="3"/><text class="tx" x="299" y="50">2,427</text><text class="tx" x="0" y="80">Eosinophils</text><rect class="bx" x="120" y="64" width="53" height="22" rx="3"/><text class="tx" x="181" y="80">744</text><text class="tx" x="0" y="110">Monocytes</text><rect class="bx" x="120" y="94" width="40" height="22" rx="3"/><text class="tx" x="168" y="110">561</text><text class="tx" x="0" y="140">Basophils</text><rect class="bx" x="120" y="124" width="15" height="22" rx="3"/><text class="tx" x="143" y="140">212</text></svg><figcaption data-i18n="p4.figcaption1">Images per cell type: a highly imbalanced dataset.</figcaption></figure><figure><svg viewBox="0 0 720 64" role="img" aria-label="Transfer learning diagram"><g><rect class="bx" x="0.0" y="4" width="126.4" height="56" rx="6"/><text class="tx" x="63.2" y="29.0" text-anchor="middle">Cell</text><text class="tx" x="63.2" y="43.0" text-anchor="middle">images</text></g><path class="ar" d="M129.4 32.0 h13 m-5 -4 l5 4 l-5 4"/><g><rect class="bx" x="148.4" y="4" width="126.4" height="56" rx="6"/><text class="tx" x="211.6" y="29.0" text-anchor="middle">GoogleNet</text><text class="tx" x="211.6" y="43.0" text-anchor="middle">(ImageNet)</text></g><path class="ar" d="M277.8 32.0 h13 m-5 -4 l5 4 l-5 4"/><g><rect class="bx" x="296.8" y="4" width="126.4" height="56" rx="6"/><text class="tx" x="360.0" y="29.0" text-anchor="middle">Base layers</text><text class="tx" x="360.0" y="43.0" text-anchor="middle">frozen</text></g><path class="ar" d="M426.2 32.0 h13 m-5 -4 l5 4 l-5 4"/><g class="hl"><rect class="bx" x="445.2" y="4" width="126.4" height="56" rx="6"/><text class="tx" x="508.4" y="29.0" text-anchor="middle">Top layers</text><text class="tx" x="508.4" y="43.0" text-anchor="middle">retrained</text></g><path class="ar" d="M574.6 32.0 h13 m-5 -4 l5 4 l-5 4"/><g><rect class="bx" x="593.6" y="4" width="126.4" height="56" rx="6"/><text class="tx" x="656.8" y="29.0" text-anchor="middle">Output:</text><text class="tx" x="656.8" y="43.0" text-anchor="middle">5 classes</text></g></svg><figcaption data-i18n="p4.figcaption2">Transfer learning reuses already-learned visual features.</figcaption></figure><div class="k"><h4 data-i18n="p4.takeaway.h">Key takeaway</h4><p data-i18n="p4.takeaway.p">I learned to start from the literature, compare several models under the same conditions, and read a model's errors class by class rather than relying on a single overall score.</p></div></div></article>
+
+<article class="pj" id="p5"><aside><p data-i18n="p5.date">April 2025</p><div><span class="chip">Scikit-learn</span><span class="chip">XGBoost</span><span class="chip">Streamlit</span></div></aside><div><h3 class="t" data-i18n="p5.title">Customer churn prediction</h3><div class="c"><div><h4 data-i18n="p5.problem.h">Problem</h4><p data-i18n="p5.problem.p">A telecom operator wants to identify customers likely to leave in order to act in time. Churn cases are a minority, making accuracy alone misleading.</p></div><div><h4 data-i18n="p5.solution.h">Solution</h4><p data-i18n="p5.solution.p">I prepared the IBM Telco dataset, trained and compared a Random Forest and XGBoost, tuned their hyperparameters, and evaluated using ROC-AUC and F1-score. I built a Streamlit app for demonstration.</p></div></div><figure><svg viewBox="0 0 720 64" role="img" aria-label="Churn prediction pipeline diagram"><g><rect class="bx" x="0.0" y="4" width="101.7" height="56" rx="6"/><text class="tx" x="50.8" y="29.0" text-anchor="middle">Data</text><text class="tx" x="50.8" y="43.0" text-anchor="middle">IBM Telco</text></g><path class="ar" d="M104.7 32.0 h13 m-5 -4 l5 4 l-5 4"/><g><rect class="bx" x="123.7" y="4" width="101.7" height="56" rx="6"/><text class="tx" x="174.5" y="36.0" text-anchor="middle">Preparation</text></g><path class="ar" d="M228.3 32.0 h13 m-5 -4 l5 4 l-5 4"/><g><rect class="bx" x="247.3" y="4" width="101.7" height="56" rx="6"/><text class="tx" x="298.2" y="29.0" text-anchor="middle">Random Forest</text><text class="tx" x="298.2" y="43.0" text-anchor="middle">XGBoost</text></g><path class="ar" d="M352.0 32.0 h13 m-5 -4 l5 4 l-5 4"/><g><rect class="bx" x="371.0" y="4" width="101.7" height="56" rx="6"/><text class="tx" x="421.8" y="29.0" text-anchor="middle">Hyperparameter</text><text class="tx" x="421.8" y="43.0" text-anchor="middle">tuning</text></g><path class="ar" d="M475.7 32.0 h13 m-5 -4 l5 4 l-5 4"/><g><rect class="bx" x="494.7" y="4" width="101.7" height="56" rx="6"/><text class="tx" x="545.5" y="29.0" text-anchor="middle">ROC-AUC</text><text class="tx" x="545.5" y="43.0" text-anchor="middle">F1-score</text></g><path class="ar" d="M599.3 32.0 h13 m-5 -4 l5 4 l-5 4"/><g><rect class="bx" x="618.3" y="4" width="101.7" height="56" rx="6"/><text class="tx" x="669.2" y="29.0" text-anchor="middle">Application</text><text class="tx" x="669.2" y="43.0" text-anchor="middle">Streamlit</text></g></svg><figcaption data-i18n="p5.figcaption">From dataset to demonstration app.</figcaption></figure><div class="k"><h4 data-i18n="p5.takeaway.h">Key takeaway</h4><p data-i18n="p5.takeaway.p">The choice of metric matters as much as the choice of model when classes are imbalanced.</p></div></div></article>
+
+<article class="pj" id="p6"><aside><p data-i18n="p6.date">December 2024</p><div><span class="chip">Scikit-learn</span><span class="chip">Pandas</span><span class="chip">Matplotlib</span><span class="chip">Seaborn</span></div></aside><div><h3 class="t" data-i18n="p6.title">Heart attack risk prediction</h3><div class="c"><div><h4 data-i18n="p6.problem.h">Problem</h4><p data-i18n="p6.problem.p">Early identification of at-risk patients helps caregivers decide. Records include age, sex, cholesterol, blood pressure, and heart rate, with missing values.</p></div><div><h4 data-i18n="p6.solution.h">Solution</h4><p data-i18n="p6.solution.p">I cleaned the data, handled missing values, normalized variables, then compared logistic regression, Random Forest, and SVM using cross-validation, with accuracy, precision, recall, and F1-score. The project is organized with a preparation script, an exploration notebook, and tests.</p></div></div><figure><svg viewBox="0 0 720 64" role="img" aria-label="Heart attack risk prediction pipeline diagram"><g><rect class="bx" x="0.0" y="4" width="126.4" height="56" rx="6"/><text class="tx" x="63.2" y="29.0" text-anchor="middle">Patient</text><text class="tx" x="63.2" y="43.0" text-anchor="middle">records</text></g><path class="ar" d="M129.4 32.0 h13 m-5 -4 l5 4 l-5 4"/><g><rect class="bx" x="148.4" y="4" width="126.4" height="56" rx="6"/><text class="tx" x="211.6" y="29.0" text-anchor="middle">Cleaning</text><text class="tx" x="211.6" y="43.0" text-anchor="middle">missing values</text></g><path class="ar" d="M277.8 32.0 h13 m-5 -4 l5 4 l-5 4"/><g><rect class="bx" x="296.8" y="4" width="126.4" height="56" rx="6"/><text class="tx" x="360.0" y="36.0" text-anchor="middle">Normalization</text></g><path class="ar" d="M426.2 32.0 h13 m-5 -4 l5 4 l-5 4"/><g><rect class="bx" x="445.2" y="4" width="126.4" height="56" rx="6"/><text class="tx" x="508.4" y="22.0" text-anchor="middle">Logistic reg.</text><text class="tx" x="508.4" y="36.0" text-anchor="middle">Random Forest</text><text class="tx" x="508.4" y="50.0" text-anchor="middle">SVM</text></g><path class="ar" d="M574.6 32.0 h13 m-5 -4 l5 4 l-5 4"/><g><rect class="bx" x="593.6" y="4" width="126.4" height="56" rx="6"/><text class="tx" x="656.8" y="29.0" text-anchor="middle">Accuracy, precision</text><text class="tx" x="656.8" y="43.0" text-anchor="middle">recall, F1</text></g></svg><figcaption data-i18n="p6.figcaption">From patient record to comparison of three models.</figcaption></figure><div class="k"><h4 data-i18n="p6.takeaway.h">Key takeaway</h4><p data-i18n="p6.takeaway.p">In healthcare, missing an at-risk patient costs more than a false alarm: recall therefore matters more than accuracy.</p></div></div></article>
+
+</section>
+
+<section id="skills"><h2 data-i18n="skills.title">Skills</h2><dl class="sk">
+<dt data-i18n="skills.dt1">AI &amp; LLM</dt><dd><span class="chip">LLM</span><span class="chip" data-i18n="skills.chip.multiagent">Multi-agent systems (LangGraph)</span><span class="chip">Prompting</span><span class="chip">Scikit-learn</span><span class="chip">XGBoost</span><span class="chip">TensorFlow</span><span class="chip">PyTorch</span></dd>
+<dt data-i18n="skills.dt2">Data &amp; cloud</dt><dd><span class="chip">ETL/ELT</span><span class="chip" data-i18n="skills.chip.dq">Data quality</span><span class="chip">BigQuery</span><span class="chip">Dataform</span><span class="chip">GCP</span><span class="chip">Cloud Scheduler</span><span class="chip">Terraform</span><span class="chip">Talend</span><span class="chip">Spark</span></dd>
+<dt data-i18n="skills.dt3">Programming</dt><dd><span class="chip">Python</span><span class="chip">SQL</span><span class="chip">Bash</span><span class="chip">Pandas</span><span class="chip">NumPy</span><span class="chip">JavaScript</span><span class="chip">Git</span><span class="chip">Linux</span></dd>
+<dt data-i18n="skills.dt4">Databases</dt><dd><span class="chip">PostgreSQL</span><span class="chip">MySQL</span><span class="chip">SQL Server</span><span class="chip">Snowflake</span></dd>
+<dt data-i18n="skills.dt5">Visualization</dt><dd><span class="chip">Streamlit</span><span class="chip">Matplotlib</span><span class="chip">Seaborn</span><span class="chip">Power BI</span></dd>
+<dt data-i18n="skills.dt6">Languages</dt><dd><span class="chip" data-i18n="skills.chip.fr">French: fluent</span><span class="chip" data-i18n="skills.chip.en">English: advanced</span></dd>
+</dl></section>
+
+<section id="education"><h2 data-i18n="education.title">Education</h2><ul class="tl">
+<li><h3 data-i18n="edu.m2.title">Master 2 — Big Data &amp; Data Mining</h3><p class="d" data-i18n="edu.m2.date">Université Paris 8 · 2025–2026</p></li>
+<li><h3 data-i18n="edu.m1.title">Master 1 — Artificial Intelligence Engineering</h3><p class="d" data-i18n="edu.m1.date">Université Paris 8 · 2024–2025</p></li>
+<li><h3 data-i18n="edu.lic.title">Bachelor's degree in Computer Science</h3><p class="d" data-i18n="edu.lic.date">Université Caen Normandie · 2022–2024</p></li>
+<li><h3 data-i18n="edu.dts.title">DTS — Software Development</h3><p class="d" data-i18n="edu.dts.date">ISTA Lazaret, Oujda · 2020–2022</p></li>
+</ul></section>
+
+<section id="research"><h2 data-i18n="research.title">Research interests</h2>
+<p>
+<span class="chip" data-i18n="research.c1">Multi-agent systems and agentic architectures</span>
+<span class="chip" data-i18n="research.c2">Explainable AI (XAI)</span>
+<span class="chip" data-i18n="research.c3">Traceability and information provenance</span>
+<span class="chip" data-i18n="research.c4">Decision verification and data quality</span>
+<span class="chip" data-i18n="research.c5">Knowledge representation and reasoning</span>
+</p></section>
+
+<section id="contact"><h2 data-i18n="contact.title">Contact</h2>
+<div class="contact-info">
+<p data-i18n="contact.intro">I'm based in Paris, France. Whether you'd like to discuss a research collaboration, a data project, or simply connect, feel free to reach out.</p>
+</div>
+<div class="contact-grid">
+<div class="contact-card">
+<div class="icon">✉️</div>
+<h3 data-i18n="contact.email.h">Email</h3>
+<p data-i18n="contact.email.p">The best way to reach me for any inquiry.</p>
+<a href="mailto:oumeyma.rhennou00@gmail.com" data-i18n="contact.email.btn">Send me an email</a>
+</div>
+<div class="contact-card">
+<div class="icon">📍</div>
+<h3 data-i18n="contact.location.h">Location</h3>
+<p data-i18n="contact.location.p">Paris, France — open to remote and on-site opportunities.</p>
+<a href="mailto:oumeyma.rhennou00@gmail.com?subject=Opportunity%20/%20Collaboration" data-i18n="contact.location.btn">Discuss an opportunity</a>
+</div>
+<div class="contact-card">
+<div class="icon">🎓</div>
+<h3 data-i18n="contact.phd.h">PhD &amp; Research</h3>
+<p data-i18n="contact.phd.p">Looking for a PhD position in AI, LLM reliability, or multi-agent systems.</p>
+<a href="mailto:oumeyma.rhennou00@gmail.com?subject=PhD%20/%20Research%20collaboration" data-i18n="contact.phd.btn">Reach out about research</a>
+</div>
+</div>
+</section>
+
+<footer data-i18n="footer.text">© 2026 Oumeyma Rhennou</footer>
+</div>
+
+<script>
+const translations = {
+  en: {
+    "nav.about": "About", "nav.career": "Career", "nav.projects": "Projects",
+    "nav.skills": "Skills", "nav.education": "Education", "nav.research": "Research", "nav.contact": "Contact",
+    "portrait.alt": "Portrait of Oumeyma Rhennou",
+    "hero.sub": "Data & AI · PhD candidate",
+    "hero.lead": "I design verification and traceability mechanisms for LLM-based systems. This portfolio presents my projects: the problem, the solution adopted, and what I learned from them.",
+    "hero.btn": "Contact me",
+    "about.title": "About",
+    "about.p1": "I hold two Master's degrees from Université Paris 8 (Big Data & Data Mining; Artificial Intelligence Engineering) and have experience in data engineering, data analysis, and AI solution development.",
+    "about.p2": "In a corporate setting, I designed a data quality control system based on multiple LLM instances. It applies business rules, precisely locates errors, and tracks their evolution. This experience, extended by a multi-agent project with LangGraph, fuels my interest in decision traceability and the reliability of agent chains.",
+    "career.title": "Professional experience",
+    "career.j1.title": "Data Engineer intern — Data Quality & AI (LLM)",
+    "career.j1.date": "Givenchy, Paris · January to July 2026",
+    "career.j1.b1": "Multi-instance LLM data quality control system with monitoring report (<a href=\"#p1\">see project</a>).",
+    "career.j1.b2": "Finance ETL/ELT pipelines and BigQuery modeling with Dataform for reporting and financial planning.",
+    "career.j1.b3": "Talend to GCP migration and infrastructure with Terraform (<a href=\"#p2\">see project</a>).",
+    "career.j1.b4": "Business requirements, functional specifications, and technical documentation.",
+    "career.j2.title": "Data Analyst intern",
+    "career.j2.date": "Office National des Aéroports, Oujda, Morocco · January to June 2022",
+    "career.j2.b1": "Extraction and processing of logistics data to track performance indicators.",
+    "career.j2.b2": "Management reports presenting indicators and their evolution.",
+    "projects.title": "Projects",
+    "projects.p1.link": "Multi-instance LLM data quality control<small>Givenchy, Paris, Jan–Jul 2026</small>",
+    "projects.p2.link": "Finance pipelines and GCP migration<small>Givenchy, Paris, 2026</small>",
+    "projects.p3.link": "Multi-agent system with LangGraph<small>Hackathon, team</small>",
+    "projects.p4.link": "White blood cell classification with deep learning<small>January 2026</small>",
+    "projects.p5.link": "Customer churn prediction<small>April 2025</small>",
+    "projects.p6.link": "Heart attack risk prediction<small>December 2024</small>",
+    "p1.date": "Givenchy, Paris, January to July 2026",
+    "p1.title": "Multi-instance LLM data quality control",
+    "p1.problem.h": "Problem",
+    "p1.problem.p": "Finance business rules are written in natural language. Verifying them on large data volumes requires translating them one by one into checks, and a simple \"error\" report doesn't indicate where or why a data point is wrong.",
+    "p1.solution.h": "Solution",
+    "p1.solution.p1": "I designed a system where multiple LLM instances, each assigned a batch of data, read the business rules and apply them to verify data acceptability.",
+    "p1.solution.p2": "When data is unacceptable, the system returns the exact columns and rows in error and the nature of the quality error. A report tracks error evolution, and Cloud Scheduler triggers execution automatically.",
+    "p1.figcaption": "From rule text to monitoring report: each anomaly is located and typed.",
+    "p1.takeaway.h": "Key takeaway",
+    "p1.takeaway.p": "An LLM verdict is only valuable if one can trace back to the rule and the data that produced it. This traceability question is what I want to explore in a PhD.",
+    "p2.date": "Givenchy, Paris, 2026",
+    "p2.title": "Finance pipelines and GCP migration",
+    "p2.problem.h": "Problem",
+    "p2.problem.p": "Finance business data needed to be integrated and synchronized in the cloud, then reliably modeled for reporting and financial planning.",
+    "p2.solution.h": "Solution",
+    "p2.solution.p": "I developed and maintained Finance pipelines, modeled data in BigQuery with Dataform, contributed to migrating from Talend to GCP, and configured infrastructure with Terraform. I also formalized business requirements and wrote specifications and technical documentation.",
+    "p2.figcaption": "From Talend to a cloud pipeline described as code.",
+    "p2.takeaway.h": "Key takeaway",
+    "p2.takeaway.p": "Describing infrastructure and transformations in code makes a pipeline reproducible and readable. Writing specifications also taught me to explain my choices to non-specialists.",
+    "p3.date": "Hackathon, team",
+    "p3.title": "Multi-agent system with LangGraph",
+    "p3.problem.h": "Problem",
+    "p3.problem.p": "A complex task can be broken down into steps assigned to autonomous agents. The challenge is to make them collaborate in a controlled way, within a limited timeframe.",
+    "p3.solution.h": "Solution",
+    "p3.solution.p": "With my team, I implemented an autonomous agent solution using the LangGraph framework, which organizes agents as a graph and circulates information between them.",
+    "p3.figcaption": "Principle diagram: each agent builds on the previous agent's work.",
+    "p3.takeaway.h": "Key takeaway",
+    "p3.takeaway.p": "In an agent chain, each agent takes the outputs of the previous one: an error can therefore propagate without any single agent bearing the full justification for the final decision. This is the starting point of the targeted PhD.",
+    "p4.date": "January 2026",
+    "p4.title": "White blood cell classification with deep learning",
+    "p4.problem.h": "Problem",
+    "p4.problem.p": "Manual analysis of medical images is slow and varies between operators. The Kaggle dataset, over 10,000 images annotated by experts, is highly imbalanced: 60% neutrophils versus 2% basophils.",
+    "p4.solution.h": "Solution",
+    "p4.solution.p": "After a literature review, I used GoogleNet pretrained on ImageNet: frozen base layers, retrained top layers, new 5-class output. I compared this approach with MobileNet v2/v3, EfficientNet-B0, SqueezeNet, ShuffleNet v2, and ResNet18, using learning curves and confusion matrices.",
+    "p4.figcaption1": "Images per cell type: a highly imbalanced dataset.",
+    "p4.figcaption2": "Transfer learning reuses already-learned visual features.",
+    "p4.takeaway.h": "Key takeaway",
+    "p4.takeaway.p": "I learned to start from the literature, compare several models under the same conditions, and read a model's errors class by class rather than relying on a single overall score.",
+    "p5.date": "April 2025",
+    "p5.title": "Customer churn prediction",
+    "p5.problem.h": "Problem",
+    "p5.problem.p": "A telecom operator wants to identify customers likely to leave in order to act in time. Churn cases are a minority, making accuracy alone misleading.",
+    "p5.solution.h": "Solution",
+    "p5.solution.p": "I prepared the IBM Telco dataset, trained and compared a Random Forest and XGBoost, tuned their hyperparameters, and evaluated using ROC-AUC and F1-score. I built a Streamlit app for demonstration.",
+    "p5.figcaption": "From dataset to demonstration app.",
+    "p5.takeaway.h": "Key takeaway",
+    "p5.takeaway.p": "The choice of metric matters as much as the choice of model when classes are imbalanced.",
+    "p6.date": "December 2024",
+    "p6.title": "Heart attack risk prediction",
+    "p6.problem.h": "Problem",
+    "p6.problem.p": "Early identification of at-risk patients helps caregivers decide. Records include age, sex, cholesterol, blood pressure, and heart rate, with missing values.",
+    "p6.solution.h": "Solution",
+    "p6.solution.p": "I cleaned the data, handled missing values, normalized variables, then compared logistic regression, Random Forest, and SVM using cross-validation, with accuracy, precision, recall, and F1-score. The project is organized with a preparation script, an exploration notebook, and tests.",
+    "p6.figcaption": "From patient record to comparison of three models.",
+    "p6.takeaway.h": "Key takeaway",
+    "p6.takeaway.p": "In healthcare, missing an at-risk patient costs more than a false alarm: recall therefore matters more than accuracy.",
+    "skills.title": "Skills",
+    "skills.dt1": "AI & LLM",
+    "skills.chip.multiagent": "Multi-agent systems (LangGraph)",
+    "skills.dt2": "Data & cloud",
+    "skills.chip.dq": "Data quality",
+    "skills.dt3": "Programming",
+    "skills.dt4": "Databases",
+    "skills.dt5": "Visualization",
+    "skills.dt6": "Languages",
+    "skills.chip.fr": "French: fluent",
+    "skills.chip.en": "English: advanced",
+    "education.title": "Education",
+    "edu.m2.title": "Master 2 — Big Data & Data Mining",
+    "edu.m2.date": "Université Paris 8 · 2025–2026",
+    "edu.m1.title": "Master 1 — Artificial Intelligence Engineering",
+    "edu.m1.date": "Université Paris 8 · 2024–2025",
+    "edu.lic.title": "Bachelor's degree in Computer Science",
+    "edu.lic.date": "Université Caen Normandie · 2022–2024",
+    "edu.dts.title": "DTS — Software Development",
+    "edu.dts.date": "ISTA Lazaret, Oujda · 2020–2022",
+    "research.title": "Research interests",
+    "research.c1": "Multi-agent systems and agentic architectures",
+    "research.c2": "Explainable AI (XAI)",
+    "research.c3": "Traceability and information provenance",
+    "research.c4": "Decision verification and data quality",
+    "research.c5": "Knowledge representation and reasoning",
+    "contact.title": "Contact",
+    "contact.intro": "I'm based in Paris, France. Whether you'd like to discuss a research collaboration, a data project, or simply connect, feel free to reach out.",
+    "contact.email.h": "Email",
+    "contact.email.p": "The best way to reach me for any inquiry.",
+    "contact.email.btn": "Send me an email",
+    "contact.location.h": "Location",
+    "contact.location.p": "Paris, France — open to remote and on-site opportunities.",
+    "contact.location.btn": "Discuss an opportunity",
+    "contact.phd.h": "PhD & Research",
+    "contact.phd.p": "Looking for a PhD position in AI, LLM reliability, or multi-agent systems.",
+    "contact.phd.btn": "Reach out about research",
+    "footer.text": "© 2026 Oumeyma Rhennou"
+  },
+  fr: {
+    "nav.about": "À propos", "nav.career": "Parcours", "nav.projects": "Projets",
+    "nav.skills": "Compétences", "nav.education": "Formation", "nav.research": "Recherche", "nav.contact": "Contact",
+    "portrait.alt": "Portrait d'Oumeyma Rhennou",
+    "hero.sub": "Data et IA · candidate au doctorat",
+    "hero.lead": "Je conçois des dispositifs de vérification et de traçabilité pour des systèmes à base de LLM. Ce portfolio présente mes projets : le problème, la solution retenue et ce que j'en retiens.",
+    "hero.btn": "Me contacter",
+    "about.title": "À propos",
+    "about.p1": "Diplômée de deux Masters à l'Université Paris 8 (Big Data et fouille de données ; Ingénierie de l'Intelligence Artificielle), j'ai une expérience en data engineering, en analyse de données et en développement de solutions d'IA.",
+    "about.p2": "J'ai conçu en entreprise un dispositif de contrôle qualité des données fondé sur plusieurs instances d'un LLM. Il applique des règles de gestion, localise précisément les erreurs et en suit l'évolution. Cette expérience, prolongée par un projet multi-agents avec LangGraph, nourrit mon intérêt pour la traçabilité des décisions et la fiabilité des chaînes d'agents.",
+    "career.title": "Parcours professionnel",
+    "career.j1.title": "Data Engineer stagiaire, Data Quality et IA (LLM)",
+    "career.j1.date": "Givenchy, Paris · janvier à juillet 2026",
+    "career.j1.b1": "Dispositif de contrôle qualité des données par plusieurs instances d'un LLM, avec rapport de suivi (<a href=\"#p1\">voir le projet</a>).",
+    "career.j1.b2": "Pipelines Finance en ETL/ELT et modélisation dans BigQuery avec Dataform pour le reporting et la planification financière.",
+    "career.j1.b3": "Migration de Talend vers GCP et infrastructure avec Terraform (<a href=\"#p2\">voir le projet</a>).",
+    "career.j1.b4": "Besoins métiers, spécifications fonctionnelles et documentation technique.",
+    "career.j2.title": "Data Analyst stagiaire",
+    "career.j2.date": "Office National des Aéroports, Oujda, Maroc · janvier à juin 2022",
+    "career.j2.b1": "Extraction et traitement de données logistiques pour suivre les indicateurs de performance.",
+    "career.j2.b2": "Reportings destinés à la direction pour présenter les indicateurs et leur évolution.",
+    "projects.title": "Projets",
+    "projects.p1.link": "Contrôle qualité des données par plusieurs instances d'un LLM<small>Givenchy, Paris, janvier à juillet 2026</small>",
+    "projects.p2.link": "Pipelines Finance et migration vers GCP<small>Givenchy, Paris, 2026</small>",
+    "projects.p3.link": "Système multi-agents avec LangGraph<small>Hackathon, en équipe</small>",
+    "projects.p4.link": "Classification de globules blancs par deep learning<small>Janvier 2026</small>",
+    "projects.p5.link": "Prédiction du churn client<small>Avril 2025</small>",
+    "projects.p6.link": "Prédiction du risque de crise cardiaque<small>Décembre 2024</small>",
+    "p1.date": "Givenchy, Paris, janvier à juillet 2026",
+    "p1.title": "Contrôle qualité des données par plusieurs instances d'un LLM",
+    "p1.problem.h": "Problématique",
+    "p1.problem.p": "Les règles de gestion de la finance sont rédigées en langage naturel. Les vérifier sur de gros volumes de données demande de les traduire une à une en contrôles, et un simple « erreur » ne dit ni où ni pourquoi une donnée est fausse.",
+    "p1.solution.h": "Solution",
+    "p1.solution.p1": "J'ai conçu un dispositif où plusieurs instances d'un LLM, chacune chargée d'un lot de données, lisent les règles de gestion et les appliquent pour vérifier que les données sont acceptables.",
+    "p1.solution.p2": "Quand une donnée ne l'est pas, le dispositif renvoie les colonnes et les lignes exactes en erreur et la nature de l'erreur de qualité. Un rapport permet de suivre l'évolution des erreurs, et Cloud Scheduler lance l'exécution automatiquement.",
+    "p1.figcaption": "Du texte des règles au rapport de suivi : chaque anomalie est localisée et typée.",
+    "p1.takeaway.h": "Ce que j'en retiens",
+    "p1.takeaway.p": "Un verdict de LLM n'a de valeur que si l'on peut remonter à la règle et à la donnée qui l'ont produit. C'est cette question de traçabilité que je souhaite approfondir en thèse.",
+    "p2.date": "Givenchy, Paris, 2026",
+    "p2.title": "Pipelines Finance et migration vers GCP",
+    "p2.problem.h": "Problématique",
+    "p2.problem.p": "Les données métiers de la finance devaient être intégrées et synchronisées dans le cloud, puis modélisées de façon fiable pour le reporting et la planification financière.",
+    "p2.solution.h": "Solution",
+    "p2.solution.p": "J'ai développé et maintenu les pipelines Finance, modélisé les données dans BigQuery avec Dataform, contribué à la migration de Talend vers GCP et configuré l'infrastructure avec Terraform. J'ai aussi formalisé les besoins métiers et rédigé les spécifications et la documentation technique.",
+    "p2.figcaption": "De Talend à une chaîne cloud décrite par du code.",
+    "p2.takeaway.h": "Ce que j'en retiens",
+    "p2.takeaway.p": "Décrire l'infrastructure et les transformations dans du code rend un pipeline reproductible et relisible. Écrire les spécifications m'a aussi appris à expliquer mes choix à des non-spécialistes.",
+    "p3.date": "Hackathon, en équipe",
+    "p3.title": "Système multi-agents avec LangGraph",
+    "p3.problem.h": "Problématique",
+    "p3.problem.p": "Une tâche complexe peut être découpée en étapes confiées à des agents autonomes. Le défi est de les faire collaborer de façon contrôlée, en limitant le temps disponible.",
+    "p3.solution.h": "Solution",
+    "p3.solution.p": "Avec mon équipe, j'ai implémenté une solution d'agents autonomes avec le framework LangGraph, qui organise les agents sous forme de graphe et fait circuler l'information entre eux.",
+    "p3.figcaption": "Schéma de principe : chaque agent s'appuie sur le travail du précédent.",
+    "p3.takeaway.h": "Ce que j'en retiens",
+    "p3.takeaway.p": "Dans une chaîne d'agents, chacun reprend les sorties du précédent : une erreur peut donc se propager sans qu'aucun agent ne porte la justification complète de la décision finale. C'est le point de départ de la thèse visée.",
+    "p4.date": "Janvier 2026",
+    "p4.title": "Classification de globules blancs par deep learning",
+    "p4.problem.h": "Problématique",
+    "p4.problem.p": "L'analyse manuelle des images médicales est lente et varie d'un opérateur à l'autre. Le jeu de données Kaggle, plus de 10 000 images annotées par des experts, est très déséquilibré : 60 % de neutrophiles contre 2 % de basophiles.",
+    "p4.solution.h": "Solution",
+    "p4.solution.p": "Après une revue de l'état de l'art, j'ai utilisé GoogleNet pré-entraîné sur ImageNet : couches de base gelées, couches hautes ré-entraînées, nouvelle sortie à 5 classes. J'ai comparé cette approche à MobileNet v2/v3, EfficientNet-B0, SqueezeNet, ShuffleNet v2 et ResNet18, avec courbes d'apprentissage et matrices de confusion.",
+    "p4.figcaption1": "Images par type de cellule : un jeu de données très déséquilibré.",
+    "p4.figcaption2": "Le transfert d'apprentissage réutilise les caractéristiques visuelles déjà apprises.",
+    "p4.takeaway.h": "Ce que j'en retiens",
+    "p4.takeaway.p": "J'ai appris à partir de la littérature, à comparer plusieurs modèles dans les mêmes conditions et à lire les erreurs d'un modèle classe par classe plutôt qu'une seule note globale.",
+    "p5.date": "Avril 2025",
+    "p5.title": "Prédiction du churn client",
+    "p5.problem.h": "Problématique",
+    "p5.problem.p": "Un opérateur télécom veut repérer les clients susceptibles de partir pour agir à temps. Les départs sont minoritaires, ce qui rend l'exactitude seule trompeuse.",
+    "p5.solution.h": "Solution",
+    "p5.solution.p": "J'ai préparé le jeu de données IBM Telco, entraîné et comparé un Random Forest et un XGBoost, optimisé leurs hyperparamètres et évalué par ROC-AUC et F1-score. J'ai réalisé une application Streamlit pour la démonstration.",
+    "p5.figcaption": "Du jeu de données à l'application de démonstration.",
+    "p5.takeaway.h": "Ce que j'en retiens",
+    "p5.takeaway.p": "Le choix de la métrique compte autant que celui du modèle quand les classes sont déséquilibrées.",
+    "p6.date": "Décembre 2024",
+    "p6.title": "Prédiction du risque de crise cardiaque",
+    "p6.problem.h": "Problématique",
+    "p6.problem.p": "Repérer tôt les patients à risque aide les soignants à décider. Les dossiers contiennent l'âge, le sexe, le cholestérol, la tension et la fréquence cardiaque, avec des valeurs manquantes.",
+    "p6.solution.h": "Solution",
+    "p6.solution.p": "J'ai nettoyé les données, traité les valeurs manquantes, normalisé les variables, puis comparé une régression logistique, un Random Forest et un SVM par validation croisée, avec accuracy, précision, rappel et F1-score. Le projet est organisé avec un script de préparation, un notebook d'exploration et des tests.",
+    "p6.figcaption": "Du dossier patient à la comparaison de trois modèles.",
+    "p6.takeaway.h": "Ce que j'en retiens",
+    "p6.takeaway.p": "En santé, rater un patient à risque coûte plus cher qu'une fausse alerte : le rappel pèse donc davantage que l'accuracy.",
+    "skills.title": "Compétences",
+    "skills.dt1": "IA et LLM",
+    "skills.chip.multiagent": "Systèmes multi-agents (LangGraph)",
+    "skills.dt2": "Données et cloud",
+    "skills.chip.dq": "Qualité des données",
+    "skills.dt3": "Programmation",
+    "skills.dt4": "Bases de données",
+    "skills.dt5": "Visualisation",
+    "skills.dt6": "Langues",
+    "skills.chip.fr": "Français : courant",
+    "skills.chip.en": "Anglais : avancé",
+    "education.title": "Formation",
+    "edu.m2.title": "Master 2 Big Data et fouille de données",
+    "edu.m2.date": "Université Paris 8 · 2025 à 2026",
+    "edu.m1.title": "Master 1 Ingénierie en intelligence artificielle",
+    "edu.m1.date": "Université Paris 8 · 2024 à 2025",
+    "edu.lic.title": "Licence Informatique",
+    "edu.lic.date": "Université Caen Normandie · 2022 à 2024",
+    "edu.dts.title": "DTS Développement informatique",
+    "edu.dts.date": "ISTA Lazaret, Oujda · 2020 à 2022",
+    "research.title": "Centres d'intérêt scientifique",
+    "research.c1": "Systèmes multi-agents et architectures agentiques",
+    "research.c2": "Explainable AI (XAI)",
+    "research.c3": "Traçabilité et provenance des informations",
+    "research.c4": "Vérification des décisions et qualité des données",
+    "research.c5": "Représentation des connaissances et raisonnement",
+    "contact.title": "Contact",
+    "contact.intro": "Je suis basée à Paris, en France. Que vous souhaitiez discuter d'une collaboration de recherche, d'un projet data, ou simplement échanger, n'hésitez pas à me contacter.",
+    "contact.email.h": "Email",
+    "contact.email.p": "Le meilleur moyen de me joindre pour toute demande.",
+    "contact.email.btn": "Envoyez-moi un email",
+    "contact.location.h": "Localisation",
+    "contact.location.p": "Paris, France — ouverte aux opportunités en présentiel et à distance.",
+    "contact.location.btn": "Discuter d'une opportunité",
+    "contact.phd.h": "Doctorat & Recherche",
+    "contact.phd.p": "À la recherche d'une thèse en IA, fiabilité des LLM ou systèmes multi-agents.",
+    "contact.phd.btn": "Me contacter pour la recherche",
+    "footer.text": "© 2026 Oumeyma Rhennou"
+  }
+};
+
+let currentLang = 'en';
+
+function setLanguage(lang) {
+  currentLang = lang;
+  const dict = translations[lang];
+  document.querySelectorAll('[data-i18n]').forEach(el => {
+    const key = el.getAttribute('data-i18n');
+    if (dict[key] !== undefined) {
+      if (el.tagName === 'A' && el.querySelector('small')) {
+        el.innerHTML = dict[key];
+      } else if (el.tagName === 'LI' && dict[key].includes('<a ')) {
+        el.innerHTML = dict[key];
+      } else {
+        el.textContent = dict[key];
+      }
+    }
+  });
+  document.querySelectorAll('[data-i18n-alt]').forEach(el => {
+    const key = el.getAttribute('data-i18n-alt');
+    if (dict[key]) el.alt = dict[key];
+  });
+  document.documentElement.lang = lang;
+  document.getElementById('langBtn').textContent = lang === 'en' ? 'FR' : 'EN';
+}
+
+function toggleLang() {
+  setLanguage(currentLang === 'en' ? 'fr' : 'en');
+}
+
+setLanguage('en');
+</script>
+
+</body>
+</html>
